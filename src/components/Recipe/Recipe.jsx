@@ -2,30 +2,37 @@ import PropTypes from 'prop-types';
 import { TfiAlarmClock } from 'react-icons/tfi';
 import { AiOutlinePieChart } from 'react-icons/ai';
 import { BsBarChart } from 'react-icons/bs';
+import { Image, Info, InfoItem, Type } from './Recipe.styled';
 
 export const Recipe = ({
   item: { name, time, servings, calories, image, difficulty },
 }) => {
   return (
     <>
-      <img src={image} alt={name} width="320" />
+      <Image src={image} alt={name} width="320" />
       <h2>{name}</h2>
-      <div>
-        <p>
+      <Info>
+        <InfoItem>
           <TfiAlarmClock /> {time} minutes
-        </p>
-        <p>
+        </InfoItem>
+        <InfoItem>
           <AiOutlinePieChart /> {servings} servings
-        </p>
-        <p>
+        </InfoItem>
+        <InfoItem>
           <BsBarChart /> {calories} calories
-        </p>
-      </div>
+        </InfoItem>
+      </Info>
       <div>
         <h3>Difficulty</h3>
-        <span>Easy</span>
-        <span>Medium</span>
-        <span>Hard</span>
+        <Type variant={difficulty} difficulty={difficulty === 'easy'}>
+          Easy
+        </Type>
+        <Type variant={difficulty} difficulty={difficulty === 'medium'}>
+          Medium
+        </Type>
+        <Type variant={difficulty} difficulty={difficulty === 'hard'}>
+          Hard
+        </Type>
       </div>
     </>
   );

@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
-import { Recipe } from './Recipe';
+import { Recipe } from 'components/Recipe/Recipe';
+import { List } from './RecipeList.styled';
 
 export const RecipeList = ({ recipes }) => {
   return (
-    <ul style={{ display: 'flex', gap: '20px' }}>
+    <List>
       {recipes.map(recipe => (
         <li key={recipe.id}>
           <Recipe item={recipe} />
         </li>
       ))}
-    </ul>
+    </List>
   );
 };
 
