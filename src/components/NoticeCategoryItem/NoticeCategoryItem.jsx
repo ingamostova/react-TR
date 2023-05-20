@@ -1,7 +1,7 @@
 import { FiHeart } from 'react-icons/fi';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { AiOutlineClockCircle } from 'react-icons/ai';
-import { BsGenderFemale } from 'react-icons/bs';
+import { BsGenderFemale, BsGenderMale } from 'react-icons/bs';
 import {
   Image,
   Title,
@@ -16,15 +16,31 @@ import {
   SpanText,
 } from './NoticeCategoryItem.styled';
 
-export const NoticeCategoryItem = () => {
+const makeCityName = cityName => {
+  if (cityName.length > 6) {
+    return `${cityName.slice(0, 5)}...`;
+  }
+  return cityName;
+};
+
+const choseSexIcon = sex => {
+  return sex === 'female' ? (
+    <BsGenderFemale
+      style={{ color: '#54ADFF', width: '24px', height: '24px' }}
+    />
+  ) : (
+    <BsGenderMale style={{ color: '#54ADFF', width: '24px', height: '24px' }} />
+  );
+};
+
+export const NoticeCategoryItem = ({
+  pet: { title, location, age, sex, image },
+}) => {
   return (
     <Container>
       <ImageContainer>
         {' '}
-        <Image
-          src="https://media-be.chewy.com/wp-content/uploads/2022/09/27095535/cute-dogs-pembroke-welsh-corgi.jpg"
-          alt="Cute dog"
-        />
+        <Image src={image} alt={title} />
         <Type>in good hands</Type>
         <BtnAddToFav type="button">
           <FiHeart
@@ -43,24 +59,22 @@ export const NoticeCategoryItem = () => {
             <HiOutlineLocationMarker
               style={{ color: '#54ADFF', width: '24px', height: '24px' }}
             />
-            <SpanText>City</SpanText>
+            <SpanText>{makeCityName(location)}</SpanText>
           </Span>
           <Span>
             <AiOutlineClockCircle
               style={{ color: '#54ADFF', width: '24px', height: '24px' }}
             />
-            <SpanText>Age</SpanText>
+            <SpanText>{age}</SpanText>
           </Span>
           <Span>
-            <BsGenderFemale
-              style={{ color: '#54ADFF', width: '24px', height: '24px' }}
-            />
-            <SpanText>Sex</SpanText>
+            {choseSexIcon(sex)}
+            <SpanText>{sex}</SpanText>
           </Span>
         </SpanContainer>
       </ImageContainer>
       <Info>
-        <Title>Сute dog looking for a home</Title>
+        <Title>{title}</Title>
         <BtnLaernMore type="button">Learn more</BtnLaernMore>
       </Info>
     </Container>

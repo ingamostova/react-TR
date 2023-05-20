@@ -11,6 +11,10 @@ export const Container = styled.div`
   @media screen and (min-width: 768px) {
     width: 336px;
   }
+
+  @media screen and (min-width: 1280px) {
+    width: 288px;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -26,6 +30,10 @@ export const Image = styled.img`
   @media screen and (min-width: 768px) {
     width: 336px;
     height: 288px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 288px;
   }
 `;
 
@@ -69,9 +77,13 @@ export const BtnLaernMore = styled.button`
   font-size: 16px;
   line-height: 22px;
 
-  /* @media screen and (min-width: 768px) {
-    margin-left: 22px;
-  } */
+  :hover,
+  :focus {
+    background: linear-gradient(290.46deg, #419ef1 0%, #9bd0ff 107.89%);
+    color: #fef9f9;
+    border: none;
+    outline: none;
+  }
 `;
 
 export const Type = styled.p`
@@ -125,6 +137,11 @@ export const SpanContainer = styled.div`
   @media screen and (min-width: 768px) {
     gap: 24px;
     left: 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 12px;
+    left: 12px;
   }
 `;
 

@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Cute dog lokking for a home",
+    "location": "Lviv",
+    "age": "1 year",
+    "sex": "female",
+    "image": "https://media-be.chewy.com/wp-content/uploads/2022/09/27095535/cute-dogs-pembroke-welsh-corgi.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Tomatoes With Creamy Feta",
+    "location": "Kyiv",
+    "age": "2 years",
+    "sex": "female",
+    "image": "https://assets.bonappetit.com/photos/62b4926736e0c90647da6b71/1:1/w_2580%2Cc_limit/0623-diana-yen-tomato-recipe-lede.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Spicy potato salad",
+    "location": "Ternopil",
+    "age": "1 year",
+    "sex": "male",
+    "image": "https://assets.bonappetit.com/photos/62bf35ae872a6cfbb260f286/1:1/w_2580%2Cc_limit/0701-tj-recipe-potato-v2.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Chicken Biryani",
+    "location": "Kharkiv",
+    "age": "1 year",
+    "sex": "female",
+    "image": "https://assets.bonappetit.com/photos/5db1b689823b960008d8468d/1:1/w_2580%2Cc_limit/Chicken-Biryani-Lede-NEW.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Smoked salmon burger",
+    "location": "Ivano-Frankivsk",
+    "age": "1 year",
+    "sex": "male",
+    "image": "https://assets.bonappetit.com/photos/62cc4eca787a907e535e8e7f/1:1/w_2580%2Cc_limit/0711-black-bean-burger-lede.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Tomatoes With Creamy Feta",
+    "location": "Lviv",
+    "age": "3 years",
+    "sex": "male",
+    "image": "https://assets.bonappetit.com/photos/62b4926736e0c90647da6b71/1:1/w_2580%2Cc_limit/0623-diana-yen-tomato-recipe-lede.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Spicy potato salad",
+    "location": "Truskavets",
+    "age": "1 year",
+    "sex": "female",
+    "image": "https://assets.bonappetit.com/photos/62bf35ae872a6cfbb260f286/1:1/w_2580%2Cc_limit/0701-tj-recipe-potato-v2.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Chicken Biryani",
+    "location": "Chernihiv",
+    "age": "1 year",
+    "sex": "male",
+    "image": "https://assets.bonappetit.com/photos/5db1b689823b960008d8468d/1:1/w_2580%2Cc_limit/Chicken-Biryani-Lede-NEW.jpg"
+  }
+]
