@@ -35,6 +35,7 @@ const choseSexIcon = sex => {
 
 export const NoticeCategoryItem = ({
   pet: { title, location, age, sex, image },
+  onClose,
 }) => {
   return (
     <Container>
@@ -75,7 +76,9 @@ export const NoticeCategoryItem = ({
       </ImageContainer>
       <Info>
         <Title>{title}</Title>
-        <BtnLaernMore type="button">Learn more</BtnLaernMore>
+        <BtnLaernMore type="button" onClick={onClose}>
+          Learn more
+        </BtnLaernMore>
       </Info>
     </Container>
   );

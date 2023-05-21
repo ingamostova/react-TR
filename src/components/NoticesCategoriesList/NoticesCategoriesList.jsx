@@ -1,32 +1,14 @@
 import { NoticeCategoryItem } from 'components/NoticeCategoryItem/NoticeCategoryItem';
 import { List } from './NoticesCategoriesList.styled';
 
-export const NoticesCategoriesList = ({ pets }) => {
+export const NoticesCategoriesList = ({ pets, onClose }) => {
   return (
     <List>
       {pets.map(pet => (
         <li key={pet.id}>
-          <NoticeCategoryItem pet={pet} />
+          <NoticeCategoryItem pet={pet} onClose={onClose} />
         </li>
       ))}
-      {/* <li>
-        <NoticeCategoryItem />
-      </li>
-      <li>
-        <NoticeCategoryItem />
-      </li>
-      <li>
-        <NoticeCategoryItem />
-      </li>
-      <li>
-        <NoticeCategoryItem />
-      </li>
-      <li>
-        <NoticeCategoryItem />
-      </li>
-      <li>
-        <NoticeCategoryItem />
-      </li> */}
     </List>
   );
 };
