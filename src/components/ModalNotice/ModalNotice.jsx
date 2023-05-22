@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { CgClose } from 'react-icons/cg';
+import { VscHeart } from 'react-icons/vsc';
 import {
   Backdrop,
   Content,
@@ -75,7 +76,10 @@ export const ModalNotice = ({
         </Comment>
         <BtnContainer>
           <ContactLink href="tel:+380971234567">Contact</ContactLink>
-          <AddToFav type="button">Add to fav</AddToFav>
+          <AddToFav type="button">
+            <span>Add to </span>
+            <VscHeart size={20} />
+          </AddToFav>
         </BtnContainer>
       </Content>
     </Backdrop>,

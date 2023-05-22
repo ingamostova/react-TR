@@ -20,16 +20,10 @@ export const Content = styled.div`
   background-color: #fff;
   border-radius: 20px;
   padding-top: 40px;
-  /* padding-left: 12px;
-  padding-right: 12px; */
   padding-bottom: 16px;
 
   @media screen and (min-width: 768px) {
     width: 681px;
-    /* padding-top: 32px;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-bottom: 24px; */
     padding: 0;
     border-radius: 40px;
   }
@@ -40,7 +34,6 @@ export const Type = styled.p`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* padding: 11px 17px; */
   margin: 0px;
   gap: 10px;
 
@@ -49,8 +42,6 @@ export const Type = styled.p`
   height: 32px;
   left: 0px;
   top: 16px;
-
-  /* blue light */
 
   background: #cce4fb;
   border-radius: 0px 16px 16px 0px;
@@ -242,6 +233,10 @@ export const AddToFav = styled.button`
   letter-spacing: 0.04em;
 
   color: #fef9f9;
+
+  svg {
+    stroke-width: 0.3px;
+  }
 
   :hover,
   :focus {

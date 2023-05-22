@@ -8,7 +8,6 @@ const changeColorInBtn = () => {
 export const Container = styled.div`
   width: 280px;
   height: 456px;
-  /* outline: 1px solid black; */
   background: #ffffff;
   box-shadow: 3px 8px 14px rgba(136, 198, 253, 0.19);
   border-radius: 0px 0px 40px 40px;
@@ -48,7 +47,6 @@ export const Title = styled.h2`
   size: 24px;
   line-height: 1.37;
   margin: 0;
-  /* width: 231px; */
 `;
 
 export const Info = styled.div`
@@ -97,7 +95,6 @@ export const Type = styled.p`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* padding: 11px 17px; */
   margin: 0px;
   gap: 10px;
 
@@ -106,8 +103,6 @@ export const Type = styled.p`
   height: 32px;
   left: 0px;
   top: 16px;
-
-  /* blue light */
 
   background: #cce4fb;
   border-radius: 0px 16px 16px 0px;
@@ -134,6 +129,11 @@ export const BtnAddToFav = styled.button`
   svg {
     fill: ${changeColorInBtn()};
     transition: all 200ms ease-in-out;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #54adff;
+    strokewidth: 1.5;
   }
   svg:hover {
     fill: #54adff;
@@ -164,10 +164,7 @@ export const Span = styled.span`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* padding: 2px 4px; */
   gap: 4px;
-
-  /* position: absolute; */
   width: 80px;
   height: 28px;
   left: 8px;
@@ -175,6 +172,13 @@ export const Span = styled.span`
 
   background: #cce4fb;
   border-radius: 16px;
+
+  svg {
+    color: #54adff;
+    width: 22px;
+    height: 22px;
+    strokewidth: 1.5;
+  }
 `;
 
 export const SpanText = styled.span`

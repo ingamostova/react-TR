@@ -24,17 +24,7 @@ const makeCityName = cityName => {
 };
 
 const choseSexIcon = sex => {
-  return sex === 'female' ? (
-    <BsGenderFemale
-      style={{
-        color: '#54ADFF',
-        width: '22px',
-        height: '22px',
-      }}
-    />
-  ) : (
-    <BsGenderMale style={{ color: '#54ADFF', width: '22px', height: '22px' }} />
-  );
+  return sex === 'female' ? <BsGenderFemale /> : <BsGenderMale />;
 };
 
 export const NoticeCategoryItem = ({
@@ -48,39 +38,15 @@ export const NoticeCategoryItem = ({
         <Image src={image} alt={title} />
         <Type>in good hands</Type>
         <BtnAddToFav type="button">
-          <FiHeart
-            size={20}
-            style={{
-              position: 'absolute',
-              left: '10px',
-              top: '10px',
-              color: '#54ADFF',
-              strokeWidth: '1.5',
-              //   fill: changeColorInBtn(),
-            }}
-          />
+          <FiHeart size={20} />
         </BtnAddToFav>
         <SpanContainer>
           <Span>
-            <HiOutlineLocationMarker
-              style={{
-                color: '#54ADFF',
-                width: '22px',
-                height: '22px',
-                strokeWidth: '1.5',
-              }}
-            />
+            <HiOutlineLocationMarker />
             <SpanText>{makeCityName(location)}</SpanText>
           </Span>
           <Span>
-            <AiOutlineClockCircle
-              style={{
-                color: '#54ADFF',
-                width: '22px',
-                height: '22px',
-                strokeWidth: '1.5',
-              }}
-            />
+            <AiOutlineClockCircle />
             <SpanText>{age}</SpanText>
           </Span>
           <Span>

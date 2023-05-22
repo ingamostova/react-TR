@@ -1,5 +1,3 @@
-// import recipes from '../recipes.json';
-// import { RecipeList } from './RecipeList/RecipeList';
 import { NoticesCategoriesList } from './NoticesCategoriesList/NoticesCategoriesList';
 import { ModalNotice } from './ModalNotice/ModalNotice';
 import pets from 'pets.json';
@@ -21,7 +19,9 @@ export const App = () => {
   };
 
   return (
-    <div style={{ padding: 15, backgroundColor: '#FEF9F9' }}>
+    <div
+      style={{ padding: 15, backgroundColor: '#FEF9F9', position: 'relative' }}
+    >
       <NoticesCategoriesList pets={pets} onClose={toggleModal} />
       {showModal && <ModalNotice onClose={toggleModal} pet={pet} />}
     </div>
