@@ -9,6 +9,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.modal-open {
+  max-height: 100hv;
+  overflow: hidden;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -16,4 +21,8 @@ code {
 
 ul {
   list-style: none;
+}
+
+button:hover {
+  cursor: pointer;
 }

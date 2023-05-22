@@ -26,15 +26,19 @@ const makeCityName = cityName => {
 const choseSexIcon = sex => {
   return sex === 'female' ? (
     <BsGenderFemale
-      style={{ color: '#54ADFF', width: '24px', height: '24px' }}
+      style={{
+        color: '#54ADFF',
+        width: '22px',
+        height: '22px',
+      }}
     />
   ) : (
-    <BsGenderMale style={{ color: '#54ADFF', width: '24px', height: '24px' }} />
+    <BsGenderMale style={{ color: '#54ADFF', width: '22px', height: '22px' }} />
   );
 };
 
 export const NoticeCategoryItem = ({
-  pet: { title, location, age, sex, image },
+  pet: { title, location, age, sex, image, id },
   onClose,
 }) => {
   return (
@@ -45,26 +49,37 @@ export const NoticeCategoryItem = ({
         <Type>in good hands</Type>
         <BtnAddToFav type="button">
           <FiHeart
+            size={20}
             style={{
               position: 'absolute',
-              width: '24px',
-              height: '24px',
-              left: '8px',
-              top: '9px',
+              left: '10px',
+              top: '10px',
               color: '#54ADFF',
+              strokeWidth: '1.5',
+              //   fill: changeColorInBtn(),
             }}
           />
         </BtnAddToFav>
         <SpanContainer>
           <Span>
             <HiOutlineLocationMarker
-              style={{ color: '#54ADFF', width: '24px', height: '24px' }}
+              style={{
+                color: '#54ADFF',
+                width: '22px',
+                height: '22px',
+                strokeWidth: '1.5',
+              }}
             />
             <SpanText>{makeCityName(location)}</SpanText>
           </Span>
           <Span>
             <AiOutlineClockCircle
-              style={{ color: '#54ADFF', width: '24px', height: '24px' }}
+              style={{
+                color: '#54ADFF',
+                width: '22px',
+                height: '22px',
+                strokeWidth: '1.5',
+              }}
             />
             <SpanText>{age}</SpanText>
           </Span>
@@ -76,7 +91,7 @@ export const NoticeCategoryItem = ({
       </ImageContainer>
       <Info>
         <Title>{title}</Title>
-        <BtnLaernMore type="button" onClick={onClose}>
+        <BtnLaernMore type="button" onClick={() => onClose(id)}>
           Learn more
         </BtnLaernMore>
       </Info>

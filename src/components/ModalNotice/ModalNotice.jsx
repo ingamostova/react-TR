@@ -1,13 +1,15 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { AiOutlineClose } from 'react-icons/ai';
+import { CgClose } from 'react-icons/cg';
 import {
   Backdrop,
   Content,
   Image,
+  ImageContainer,
   ContainerInfo,
   BtnClose,
   Title,
+  Type,
   List,
   Item,
   Comment,
@@ -18,7 +20,10 @@ import {
 
 const modalRoot = document.querySelector('#modal-root');
 
-export const ModalNotice = ({ onClose }) => {
+export const ModalNotice = ({
+  onClose,
+  pet: { image, title, location, birthday, sex, name, breed, email, phone },
+}) => {
   useEffect(() => {
     const handleKeyDown = e => {
       if (e.code === 'Escape') {
@@ -41,24 +46,25 @@ export const ModalNotice = ({ onClose }) => {
     <Backdrop onClick={handleBackdropClick}>
       <Content>
         <BtnClose type="button" onClick={onClose}>
-          <AiOutlineClose />
+          <CgClose size={22} color="#54ADFF" />
         </BtnClose>
         <ContainerInfo>
-          <Image
-            src="https://media-be.chewy.com/wp-content/uploads/2022/09/27095535/cute-dogs-pembroke-welsh-corgi.jpg"
-            alt="dog"
-          />
+          <ImageContainer>
+            {' '}
+            <Image src={image} alt="dog" />
+            <Type>in good hands</Type>
+          </ImageContainer>
           <div style={{ width: '321px', padding: '0 12px' }}>
             {' '}
-            <Title>Сute dog looking for a home</Title>
+            <Title>{title}</Title>
             <List>
-              <Item>Name:</Item>
-              <Item>Birthday:</Item>
-              <Item>Breed:</Item>
-              <Item>Place:</Item>
-              <Item>The sex:</Item>
-              <Item>Email:</Item>
-              <Item>Phone:</Item>
+              <Item>Name: {name}</Item>
+              <Item>Birthday: {birthday}</Item>
+              <Item>Breed: {breed}</Item>
+              <Item>Place: {location}</Item>
+              <Item>The sex: {sex}</Item>
+              <Item>Email: {email}</Item>
+              <Item>Phone: {phone}</Item>
             </List>
           </div>
         </ContainerInfo>

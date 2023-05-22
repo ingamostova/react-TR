@@ -1,5 +1,10 @@
 import styled from '@emotion/styled';
 
+const changeColorInBtn = () => {
+  const isInFav = false;
+  return isInFav ? '#54ADFF' : '#CCE4FB';
+};
+
 export const Container = styled.div`
   width: 280px;
   height: 456px;
@@ -76,6 +81,7 @@ export const BtnLaernMore = styled.button`
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
+  transition: all 250ms ease-in-out;
 
   :hover,
   :focus {
@@ -124,6 +130,14 @@ export const BtnAddToFav = styled.button`
   background: #c5dff6;
   border: none;
   border-radius: 50px;
+
+  svg {
+    fill: ${changeColorInBtn()};
+    transition: all 200ms ease-in-out;
+  }
+  svg:hover {
+    fill: #54adff;
+  }
 `;
 
 export const SpanContainer = styled.div`
