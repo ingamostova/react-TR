@@ -16,6 +16,18 @@ import {
   SpanText,
 } from './NoticeCategoryItem.styled';
 
+const getCurrentAge = date => {
+  const dateArr = date.split('.');
+  const birthdayDate = `${dateArr[2]}.${dateArr[1]}.${dateArr[0]}`;
+  const age =
+    (new Date().getTime() - new Date(birthdayDate)) /
+    (24 * 3600 * 1000 * 365.25);
+  if (age < 1) {
+    return `${Math.floor((age * 365.25) / 30)} mo.`;
+  }
+  return Math.floor(age) === 1 ? `1 year` : `${Math.floor(age)} years`;
+};
+
 const makeCityName = cityName => {
   if (cityName.length > 6) {
     return `${cityName.slice(0, 5)}...`;
@@ -28,7 +40,7 @@ const choseSexIcon = sex => {
 };
 
 export const NoticeCategoryItem = ({
-  pet: { title, location, age, sex, image, id },
+  pet: { title, location, age, birthday, sex, image, id },
   onClose,
 }) => {
   return (
@@ -47,7 +59,7 @@ export const NoticeCategoryItem = ({
           </Span>
           <Span>
             <AiOutlineClockCircle />
-            <SpanText>{age}</SpanText>
+            <SpanText>{getCurrentAge(birthday)}</SpanText>
           </Span>
           <Span>
             {choseSexIcon(sex)}
